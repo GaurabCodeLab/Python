@@ -6,13 +6,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # line graph:-
-xpoints = np.array([2,4,6,8])
-ypoints = np.array([3,6,9,12])
+x1 = np.array([2,4,6,8])
+y1 = np.array([3,6,9,12])
+x2 = np.array([10,15,19,32])
+y2 = np.array([81,23,56,22])
 # xpoints is optional, if not specified it will take as [0,1,2,3]
-plt.plot(xpoints, ypoints, color="red", marker="*", markersize=10, markeredgecolor="green", markerfacecolor="yellow", linestyle="dashed", linewidth=10)
-plt.xlabel("raja", color="cyan")
-plt.ylabel("dolly", color="pink")
-plt.grid(axis="both") # possible values are axis="x", axis="y", axis="both"
+plt.plot(x1, y1,x2, y2, color="red", marker="*", markersize=10, markeredgecolor="green", markerfacecolor="yellow", linestyle="dashed", linewidth=10)
+# plt.plot(x2, y2)
+font = {'family':'serif','color':'blue','size':10}
+plt.xlabel("raja", color="cyan", fontdict=font)
+plt.ylabel("dolly", color="pink", fontdict=font)
+plt.title("my matplotlib learning", color="red", fontdict=font, loc="left")
+plt.grid(axis="both", color="green", linestyle="dotted", linewidth=2) # possible values are axis="x", axis="y", axis="both"
 plt.show()
 
 #  Scatter diagram:-
