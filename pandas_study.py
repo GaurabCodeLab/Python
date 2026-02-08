@@ -32,7 +32,7 @@ a = [1, 7, 2]
 # print(df.loc["day1":"day3", "duration"])
 
 # load csv files:-
-# df = pd.read_csv('data.csv')
+df = pd.read_csv('data.csv')
 # print(df.to_string())  # use to_string() to print the entire DataFrame, having large DataFrame with many rows, Pandas will only return the first 5 rows, and the last 5 rows:
 # print(pd.options.display.max_rows) # In my system the number is 60, which means that if the DataFrame contains more than 60 rows, the print(df) statement will return only the headers and the first and last 5 rows.
 # change the maximum rows number with the same statement.
@@ -44,6 +44,12 @@ a = [1, 7, 2]
 # print(df.tail(23))
 # print(df.info())
 # print(df.describe())
+print(df.shape) # return a tuple (169, 4)
+print(df.dtypes) # return a series 
+# Duration      int64
+# Pulse         int64
+# Maxpulse      int64
+# Calories    float64
 
 # load json files:-
 # df = pd.read_json("data.json")
@@ -121,6 +127,6 @@ df = pd.read_csv('data.csv')
 # plt.show()
 # df.plot(kind = 'scatter', x = 'Duration', y = 'Maxpulse')
 # plt.show()
-df["Duration"].plot(kind = 'hist')
-plt.show()
+# df["Duration"].plot(kind = 'hist')
+# plt.show()
 
