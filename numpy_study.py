@@ -27,7 +27,16 @@ import numpy as np
 # arr_3D = np.array([[[1,2,3], [4,5,6]], [[1,2,3], [4,5,6]]])
 # print(arr_3D) # 2-D array
 # print(arr_3D.ndim) # 3
-arr = np.array([1,2,3,4], ndmin=5)
-print(arr) # [[[[[1 2 3 4]]]]]
-print(arr.ndim) # 5
+# arr = np.array([1,2,3,4], ndmin=5)
+# print(arr) # [[[[[1 2 3 4]]]]]
+# print(arr.ndim) # 5
 
+# Array Indexing:-
+# arr = np.array([1, 2, 3, 4])
+# print(arr[1])
+# arr2 = np.array([[1,2,3,4,5], [6,7,8,9,10]]) 
+# print(arr2[1, 3])  #  9
+# arr3 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+# print(arr3[0, 1, 2]) # 6
+# arr4 = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+# print(arr4[1, -1]) # 10
