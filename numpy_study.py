@@ -132,9 +132,93 @@ import numpy as np
 # We can not pass -1 to more than one dimension.
 # Flattening array means converting a multidimensional array into a 1D array.
 # We can use reshape(-1) to do this.
-arr = np.array([[1, 2, 3], [4, 5, 6]])
-newarr = arr.reshape(-1)
-print(newarr)  # [1 2 3 4 5 6]
+# arr = np.array([[1, 2, 3], [4, 5, 6]])
+# newarr = arr.reshape(-1)
+# print(newarr)  # [1 2 3 4 5 6]
+
+# NumPy Array Iterating:-
+# arr = np.array([1, 2, 3])
+# for x in arr:
+#   print(x)
+# output 
+# 1
+# 2
+# 3
+# arr = np.array([[1, 2, 3], [4, 5, 6]])
+# for x in arr:
+#   print(x)
+# output
+# [1 2 3]
+# [4 5 6]
+# If we iterate on a n-D array it will go through n-1th dimension one by one.
+# arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+# for x in np.nditer(arr):
+#   print(x)
+# output
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+# for x in np.nditer(arr[:, ::2]):
+#   print(x)
+# output:-
+# 1
+# 3
+# 5
+# 7
+# arr = np.array([1, 2, 3])
+# for idx, x in np.ndenumerate(arr):
+#   print(idx, x)
+# output:-
+# (0,) 1
+# (1,) 2
+# (2,) 3
+# arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+# for raja, x in np.ndenumerate(arr):
+#   print(raja, x)
+# output:-
+# (0, 0) 1
+# (0, 1) 2
+# (0, 2) 3
+# (0, 3) 4
+# (1, 0) 5
+# (1, 1) 6
+# (1, 2) 7
+# (1, 3) 8
+
+# NumPy Joining Array:-
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+# arr = np.concatenate((arr1, arr2))
+# print(arr)  # [1 2 3 4 5 6]
+# arr1 = np.array([[1, 2], [3, 4]])
+# arr2 = np.array([[5, 6], [7, 8]])
+# arr = np.concatenate((arr1, arr2), axis=1) # axis =1 means along rows
+# print(arr)  # [[1 2 5 6]  [3 4 7 8]]
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+# arr = np.stack((arr1, arr2), axis=1)  # If axis is not explicitly passed it is taken as 0.
+# print(arr)  # [[1 4]  [2 5]  [3 6]]
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+# arr = np.hstack((arr1, arr2))
+# print(arr)  # [1 2 3 4 5 6]
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+# arr = np.vstack((arr1, arr2))
+# print(arr)  # [[1 2 3]  [4 5 6]]
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.dstack((arr1, arr2))
+print(arr)  # [[[1 4] [2 5] [3 6]]]
+
+
+
 
 
 
