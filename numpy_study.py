@@ -194,7 +194,7 @@ import numpy as np
 # NumPy Joining Array:-
 # arr1 = np.array([1, 2, 3])
 # arr2 = np.array([4, 5, 6])
-# arr = np.concatenate((arr1, arr2))
+# arr = np.concatenate((arr1, arr2))  #  If axis is not explicitly passed, it is taken as 0.
 # print(arr)  # [1 2 3 4 5 6]
 # arr1 = np.array([[1, 2], [3, 4]])
 # arr2 = np.array([[5, 6], [7, 8]])
@@ -206,16 +206,60 @@ import numpy as np
 # print(arr)  # [[1 4]  [2 5]  [3 6]]
 # arr1 = np.array([1, 2, 3])
 # arr2 = np.array([4, 5, 6])
-# arr = np.hstack((arr1, arr2))
+# arr = np.hstack((arr1, arr2))  # Stacking Along Rows
 # print(arr)  # [1 2 3 4 5 6]
 # arr1 = np.array([1, 2, 3])
 # arr2 = np.array([4, 5, 6])
-# arr = np.vstack((arr1, arr2))
+# arr = np.vstack((arr1, arr2))  # Stacking Along Columns
 # print(arr)  # [[1 2 3]  [4 5 6]]
-arr1 = np.array([1, 2, 3])
-arr2 = np.array([4, 5, 6])
-arr = np.dstack((arr1, arr2))
-print(arr)  # [[[1 4] [2 5] [3 6]]]
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+# arr = np.dstack((arr1, arr2))  # Stacking Along Height (depth)
+# print(arr)  # [[[1 4] [2 5] [3 6]]]
+
+# NumPy Splitting Array:-
+# Splitting is reverse operation of Joining.
+# arr = np.array([1, 2, 3, 4, 5, 6])
+# newarr = np.array_split(arr, 10)
+# print(newarr)  # [array([1, 2]), array([3, 4]), array([5, 6])]
+# If the array has less elements than required, it will adjust from the end accordingly.
+# arr = np.array([1, 2, 3, 4, 5, 6])
+# newarr = np.array_split(arr, 4)
+# print(newarr)  # [array([1, 2]), array([3, 4]), array([5]), array([6])]
+# arr = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+# newarr = np.array_split(arr, 3)
+# print(newarr)  # [array([[1, 2], [3, 4]]), array([[5, 6], [7, 8]]), array([[ 9, 10], [11, 12]])]
+# arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+# newarr = np.array_split(arr, 3, axis=1)  # axis = 1 means along columns
+# print(newarr)  # [array([[ 1], [ 4], [ 7], [10], [13], [16]]), array([[ 2], [ 5], [ 8], [11], [14], [17]]), array([[ 3], [ 6], [ 9], [12], [15], [18]])]
+# An alternate solution is using hsplit() opposite of hstack()
+# arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+# newarr = np.hsplit(arr, 3)
+# print(newarr) # same as previous
+# Note: Similar alternates to vstack() and dstack() are available as vsplit() and dsplit()
+
+# NumPy Searching Arrays:-
+# arr = np.array([1, 2, 3, 4, 5, 4, 4])
+# x = np.where(arr == 4)
+# print(x)  # (array([3, 5, 6]),)
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+x = np.where(arr%2 == 0)
+print(x)  # (array([1, 3, 5, 7]),)
+
+  
+
+
+
+
+ 
+
+ 
+
+ 
+      
+
+
+
 
 
 
