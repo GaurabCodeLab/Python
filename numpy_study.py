@@ -242,9 +242,44 @@ import numpy as np
 # arr = np.array([1, 2, 3, 4, 5, 4, 4])
 # x = np.where(arr == 4)
 # print(x)  # (array([3, 5, 6]),)
-arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
-x = np.where(arr%2 == 0)
-print(x)  # (array([1, 3, 5, 7]),)
+# arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+# x = np.where(arr%2 == 0)
+# print(x)  # (array([1, 3, 5, 7]),)
+
+# NumPy Sorting Arrays:-
+# arr = np.array([3, 2, 0, 1])
+# print(np.sort(arr))  # [0 1 2 3]
+# # Note: This method returns a copy of the array, leaving the original array unchanged.
+# arr = np.array(['banana', 'cherry', 'apple'])
+# print(np.sort(arr))  # ['apple' 'banana' 'cherry']
+# arr = np.array([True, False, True])
+# print(np.sort(arr))  # [False  True  True]
+# arr = np.array([[3, 2, 4], [5, 0, 1]])
+# print(np.sort(arr))  # [[2 3 4]  [0 1 5]]
+# arr = np.array([[3, 2, 4], ["ram", "sita", "aanar"]])
+# print(np.sort(arr))  # [['2' '3' '4']  ['aanar' 'ram' 'sita']]
+
+# NumPy Filter Array:-
+# Getting some elements out of an existing array and creating a new array out of them is called filtering.
+# In NumPy, you filter an array using a boolean index list.
+# A boolean index list is a list of booleans corresponding to indexes in the array.
+# If the value at an index is True that element is contained in the filtered array, if the value at that index is False that element is excluded from the filtered array.
+# arr = np.array([41, 42, 43, 44])
+# x = [True, False, True, False]
+# newarr = arr[x]
+# print(newarr)  # [41 43]
+# arr = np.array([41, 42, 43, 44])
+# filter_arr = arr > 42
+# newarr = arr[filter_arr]
+# print(filter_arr)  # [False False  True  True]
+# print(newarr)  # [43 44]
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+filter_arr = arr % 2 == 0
+newarr = arr[filter_arr]
+print(filter_arr)  # [False  True False  True False  True False]
+print(newarr)  # [2 4 6]
+
+
 
   
 
