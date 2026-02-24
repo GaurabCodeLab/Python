@@ -273,11 +273,11 @@ import numpy as np
 # newarr = arr[filter_arr]
 # print(filter_arr)  # [False False  True  True]
 # print(newarr)  # [43 44]
-arr = np.array([1, 2, 3, 4, 5, 6, 7])
-filter_arr = arr % 2 == 0
-newarr = arr[filter_arr]
-print(filter_arr)  # [False  True False  True False  True False]
-print(newarr)  # [2 4 6]
+# arr = np.array([1, 2, 3, 4, 5, 6, 7])
+# filter_arr = arr % 2 == 0
+# newarr = arr[filter_arr]
+# print(filter_arr)  # [False  True False  True False  True False]
+# print(newarr)  # [2 4 6]
 
 
 
