@@ -27,10 +27,11 @@ import time
 # print(now.strftime("%d-%m-%y %H:%M:%S"))  # 23-02-26 17:46:59
 # print(now.strftime("%y-%m-%d %H")) # 26-02-23 17
 
-# now = datetime.now()
+now = datetime.now()
 # print(now)  # 2026-02-24 01:52:37.978813
 # print(now + timedelta(days=5))  # 2026-03-01 01:52:37.978813
 # print(now - timedelta(hours=2))  # 2026-02-23 23:52:37.978813
+# arguments of timedelta is days, hours, minutes, seconds and all are in floats
 
 # Difference between two dates:-
 # now = date.today()
@@ -49,7 +50,6 @@ import time
 # print(now_ist)  # 2026-02-24 02:04:14.163932
 # print(now_utc)  # 2026-02-23 20:34:14.163956+00:00
 
-
 # TIME MODULE:-
 
 # current time in seconds:-
@@ -60,4 +60,3 @@ import time
 # print("start")
 # time.sleep(3)
 # print("End after 3 seconds")
-
