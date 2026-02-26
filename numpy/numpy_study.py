@@ -5,7 +5,7 @@
 
 # check numpy version:-
 import numpy as np
-# print(np.__version__)
+print(np.__version__)  # 2.3.4
 
 # create a numpy array:-
 # arr = np.array([1,2,3,4,5])
