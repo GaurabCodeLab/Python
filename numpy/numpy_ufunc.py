@@ -88,5 +88,27 @@ import numpy as np
 # newarr = np.cumsum(arr)
 # print(newarr)  # [1 3 6]
 
+# NumPy Products:-
+# arr = np.array([1, 2, 3, 4])
+# x = np.prod(arr)
+# print(x)  # 24
+# arr1 = np.array([1, 2, 3, 4])
+# arr2 = np.array([5, 6, 7, 8])
+# x = np.prod([arr1, arr2])
+# print(x)  # 40320, because 1*2*3*4*5*6*7*8 = 40320
+# newarr = np.prod([arr1, arr2], axis=1)
+# print(newarr)  # [  24 1680]
+# arr = np.array([5, 6, 7, 8])
+# newarr = np.cumprod(arr)
+# print(newarr)  # [   5   30  210 1680]
+
+# NumPy Differences:-
+# arr = np.array([10, 15, 25, 5])
+# newarr = np.diff(arr) # Compute discrete difference (A discrete difference means subtracting two successive elements)
+# print(newarr)  # [  5  10 -20]
+arr = np.array([10, 15, 25, 5])
+newarr = np.diff(arr, n=2)
+print(newarr)  # [  5 -30]
+
 
 
