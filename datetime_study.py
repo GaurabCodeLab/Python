@@ -1,62 +1,52 @@
-from datetime import date, datetime, timedelta, timezone
+import os
 import time
+from datetime import date, datetime, timedelta, timezone
 
-# Getting Today's Date:-
-# today = date.today()
-# print(today)  # 2026-02-23
-# print(today.year)  # 2026
-# print(today.month)  # 2
-# print(today.day)  # 23
-# d = date(2024,12,31)
-# print(d)  # 2024-12-31
+# os module:-
+# print(os.getenv("RAM"))  # None
+# print(os.getenv("RAM", "raja1634@"))  # raja1634@
 
-# Getting Current Date & Time:-
-# now = datetime.now()
-# print(now)  # 2026-02-23 12:56:23.425138
-# print(now.hour)  # 12
-# print(now.minute)  # 56
-# print(now.second)  # 23
+# time module:-
+# now = time.time()
+# print(now)  # 1772219666.9514282, UTC time since Jan 1, 1970
+# print("start")
+# time.sleep(5)
+# print("print after 5 seconds")
+
+# datetime module:-
+# now = datetime.now() # local time
+# print(now)  # 2026-02-28 00:53:25.166438
 # print(now.year)  # 2026
 # print(now.month)  # 2
-# print(now.day)  # 23
-# dt = datetime(2024, 4, 25, 10, 55, 23)
-# print(dt)  # 2024-04-25 10:55:23
-
-# Formatting Date & Time:-
-# now = datetime.now()
-# print(now.strftime("%d-%m-%y %H:%M:%S"))  # 23-02-26 17:46:59
-# print(now.strftime("%y-%m-%d %H")) # 26-02-23 17
-
-now = datetime.now()
-# print(now)  # 2026-02-24 01:52:37.978813
-# print(now + timedelta(days=5))  # 2026-03-01 01:52:37.978813
-# print(now - timedelta(hours=2))  # 2026-02-23 23:52:37.978813
-# arguments of timedelta is days, hours, minutes, seconds and all are in floats
-
-# Difference between two dates:-
-# now = date.today()
-# d1 = date(2024, 12, 31)
-# diff = now - d1
-# print(diff)  # 420 days, 0:00:00
-# print(diff.days)  # 420
-# now = datetime.now()
-# d1 = datetime(2012, 12, 31, 13, 12, 33)
-# diff = now - d1
-# print(diff)  # 4802 days, 12:47:26.014105
-# print(diff.days)  # 4802
-
-# now_ist = datetime.now() # gives indian time
-# now_utc = datetime.now(timezone.utc) # gives UTC time
-# print(now_ist)  # 2026-02-24 02:04:14.163932
-# print(now_utc)  # 2026-02-23 20:34:14.163956+00:00
-
-# TIME MODULE:-
-
-# current time in seconds:-
-# now = time.time()  # Give seconds since 1 Jan 1970 (called Unix Timestamp)
-# print(now)  # 1771917263.95265
-
-# pause the program:-
-# print("start")
-# time.sleep(3)
-# print("End after 3 seconds")
+# print(now.day)  # 28
+# print(now.hour)  # 0
+# print(now.minute)  # 53
+# print(now.second)  # 25
+# d1 = datetime(2056, 12, 27, 14, 22, 44)
+# print(d1)  # 2056-12-27 14:22:44
+# diff = d1 - now
+# print(diff)  # 11260 days, 13:08:14.363300
+# print(diff.days)  # 11260
+# print(diff.seconds)  # 47294
+# print(diff.microseconds)  # 363300
+# d2 = now + timedelta(days=23)
+# print(d2)  # 2026-03-23 00:53:25.166438
+# print(now.strftime("%d-%m-%y %H:%M:%S"))  # 28-02-26 01:22:32
+# today = date.today()
+# print(today)  # 2026-02-28
+# print(today.year)  # 2026
+# print(today.month)  # 2
+# print(today.day)  # 28
+# d1 = date(2024, 12, 30)
+# print(d1)  # 2024-12-30
+# d2 = date(2029, 2, 23)
+# diff = d2 - d1
+# print(diff)  # 1516 days, 0:00:00
+# print(diff.days)  # 1516
+# print(d2 + timedelta(hours=48))  # 2029-02-25
+# print(d2 + timedelta(days=12)) # 2029-03-07
+# print(today.strftime("%m-%d-%y"))  # 02-28-26
+# now_ist = datetime.now()
+# print(now_ist)  # 2026-02-28 01:35:24.928559
+# now_utc = datetime.now(timezone.utc)
+# print(now_utc)  # 2026-02-27 20:05:24.928786+00:00
