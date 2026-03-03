@@ -106,9 +106,85 @@ import numpy as np
 # arr = np.array([10, 15, 25, 5])
 # newarr = np.diff(arr) # Compute discrete difference (A discrete difference means subtracting two successive elements)
 # print(newarr)  # [  5  10 -20]
-arr = np.array([10, 15, 25, 5])
-newarr = np.diff(arr, n=2)
-print(newarr)  # [  5 -30]
+# arr = np.array([10, 15, 25, 5])
+# newarr = np.diff(arr, n=2)
+# print(newarr)  # [  5 -30]
 
+# NumPy LCM Lowest Common Multiple:-
+# num1 = 4
+# num2 = 6
+# x = np.lcm(num1, num2)
+# print(x)  # 12
+# arr = np.array([3, 6, 9])
+# x = np.lcm.reduce(arr)
+# print(x)  # 18
 
+# NumPy GCD Greatest Common Divisor:-
+# num1 = 6
+# num2 = 9
+# x = np.gcd(num1, num2, 12)
+# print(x)  # 3
+# arr = np.array([20, 8, 32, 36, 16])
+# x = np.gcd.reduce(arr)
+# print(x)  # 4
 
+# NumPy Trigonometric Functions:-
+# x = np.sin(np.pi/2)
+# print(x)  # 1.0
+# arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+# x = np.sin(arr)
+# print(x)  # [1. 0.8660254 0.70710678 0.58778525]
+# y = np.deg2rad(22)
+# print(y)  # 0.3839724354387525
+# arr = np.array([90, 180, 270, 360])
+# x = np.deg2rad(arr)
+# print(x)  # [1.57079633 3.14159265 4.71238898 6.28318531]
+# y = np.rad2deg(12)
+# print(y)  # 687.5493541569879
+# arr = np.array([np.pi/2, np.pi, 1.5*np.pi, 2*np.pi])
+# x = np.rad2deg(arr)
+# print(x)  # [ 90. 180. 270. 360.]
+# x = np.arcsin(1.0)
+# print(x)  # 1.5707963267948966
+# arr = np.array([1, -1, 0.1])
+# x = np.arcsin(arr)
+# print(x)  # [ 1.57079633 -1.57079633  0.10016742]
+# base = 3
+# perp = 4
+# x = np.hypot(base, perp)
+# print(x)  # 5.0
+
+# NumPy Hyperbolic Functions:-
+# x = np.sinh(np.pi/2)
+# print(x)  # 2.3012989023072947
+# arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+# x = np.cosh(arr)
+# print(x)  # [2.50917848 1.60028686 1.32460909 1.20397209]
+# x = np.arcsinh(1.0)
+# print(x)  # 0.881373587019543
+# arr = np.array([0.1, 0.2, 0.5])
+# x = np.arctanh(arr)
+# print(x)  # [0.10033535 0.20273255 0.54930614]
+
+# NumPy Set Operations:-
+# A set in mathematics is a collection of unique elements.
+# arr = np.array([1, 1, 1, 2, 3, 4, 5, 5, 6, 7])
+# x = np.unique(arr)
+# print(x)  # [1 2 3 4 5 6 7]
+# arr1 = np.array([1, 2, 3, 4])
+# arr2 = np.array([3, 4, 5, 6])
+# newarr = np.union1d(arr1, arr2)
+# print(newarr)  # [1 2 3 4 5 6]
+# arr1 = np.array([1, 2, 3, 4])
+# arr2 = np.array([3, 4, 5, 6])
+# newarr = np.intersect1d(arr1, arr2, assume_unique=True)
+# print(newarr)  # [3 4]
+# Note: the intersect1d() method takes an optional argument assume_unique, which if set to True can speed up computation. It should always be set to True when dealing with sets.
+# set1 = np.array([1, 2, 3, 4])
+# set2 = np.array([3, 4, 5, 6])
+# newarr = np.setdiff1d(set1, set2, assume_unique=True)
+# print(newarr)  # [1 2]
+# set1 = np.array([1, 2, 3, 4])
+# set2 = np.array([3, 4, 5, 6])
+# newarr = np.setxor1d(set1, set2, assume_unique=True)  # To find only the values that are NOT present in BOTH sets (Symmetric Difference)
+# print(newarr)  # [1 2 5 6]
