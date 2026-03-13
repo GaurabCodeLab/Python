@@ -78,14 +78,44 @@ import seaborn as sns
 # }
 # sns.displot(data, kind="kde")
 # plt.show()
-data = {
-  "binomial": random.binomial(n=1000, p=0.01, size=1000),
-  "poisson": random.poisson(lam=10, size=1000)
-}
-sns.displot(data, kind="kde")
-plt.show()
+# data = {
+#   "binomial": random.binomial(n=1000, p=0.01, size=1000),
+#   "poisson": random.poisson(lam=10, size=1000)
+# }
+# sns.displot(data, kind="kde")
+# plt.show()
 
+# Uniform Distribution:-
+# Used to describe probability where every event has equal chances of occuring.
+# x = random.uniform(size=(2, 3))
+# print(x) # [[0.01359661 0.58884887 0.93528197] [0.6438507  0.58748739 0.31764499]]
+# sns.displot(random.uniform(size=1000), kind="kde")
+# plt.show()
 
+# Logistic Distribution:-
+# x = random.logistic(loc=1, scale=2, size=(2, 3)) # Draw 2x3 samples from a logistic distribution with mean at 1 and stddev 2.0
+# print(x)  # [[2.34841462 1.09674752 0.82624434] [0.70507402 1.51467193 0.10942292]]
+# sns.displot(random.logistic(size=1000), kind="kde")
+# plt.show()
+# data = {
+#   "normal": random.normal(scale=2, size=1000),
+#   "logistic": random.logistic(size=1000)
+# }
+# sns.displot(data, kind="kde")
+# plt.show()
+
+# Multinomial Distribution:-
+# Multinomial distribution is a generalization of binomial distribution.
+# x = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
+# print(x) # [3 0 3 0 0 0]
+# Note: Multinomial samples will NOT produce a single value! They will produce one value for each pval
+
+# Exponential Distribution:-
+# x = random.exponential(scale=2, size=(2, 3))
+# print(x)  # [[3.89766686 0.47145764 2.00666189] [0.0439367  0.5086273  1.09567157]]
+# sns.displot(random.exponential(size=1000), kind="kde")
+# plt.show()
+# Poisson distribution deals with number of occurences of an event in a time period whereas exponential distribution deals with the time between these events.
 
 
 
