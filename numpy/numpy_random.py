@@ -117,6 +117,20 @@ import seaborn as sns
 # plt.show()
 # Poisson distribution deals with number of occurences of an event in a time period whereas exponential distribution deals with the time between these events.
 
+# Chi Square Distribution:-
+# x = random.chisquare(df=2, size=(2, 3)) # chi squared distribution with degree of freedom 2 with size 2x3:
+# print(x)  # [[1.45078524 5.09094235 3.34107459] [1.6718828  1.35365044 0.23864214]]
+# sns.displot(random.chisquare(df=1, size=1000), kind="kde")
+# plt.show()
+
+# Rayleigh Distribution:-
+# x = random.rayleigh(scale=2, size=(2, 3))  # rayleigh distribution with scale of 2 with size 2x3
+# print(x)  # [[3.40264931 5.6877841  2.19810089] [3.89322192 0.98014182 0.74223543]]
+# sns.displot(random.rayleigh(size=1000), kind="kde")
+# plt.show()
+# At unit stddev and 2 degrees of freedom rayleigh and chi square represent the same distributions.
+
+
 
 
 
