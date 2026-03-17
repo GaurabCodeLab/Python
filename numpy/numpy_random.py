@@ -130,6 +130,21 @@ import seaborn as sns
 # plt.show()
 # At unit stddev and 2 degrees of freedom rayleigh and chi square represent the same distributions.
 
+# Pareto Distribution:-
+# A distribution following Pareto's law i.e. 80-20 distribution (20% factors cause 80% outcome).
+# x = random.pareto(a=2, size=(2, 3))
+# print(x)  # [[0.33042636 0.24372523 0.67524506] [0.03227719 0.48614385 0.18264105]]
+# sns.displot(random.pareto(a=2, size=1000))
+# plt.show()
+
+# Zipf Distribution:-
+# Zipf's Law: In a collection, the nth common term is 1/n times of the most common term. E.g. the 5th most common word in English occurs nearly 1/5 times as often as the most common word.
+# x = random.zipf(a=2, size=(2, 3))
+# print(x)  # [[1 2 6] [1 4 1]]
+x = random.zipf(a=2, size=1000)
+sns.displot(x[x<10])
+plt.show()
+
 
 
 
