@@ -16,7 +16,7 @@ print(np.__version__)  # 2.3.4
 
 # Dimension of array:-
 # arr_0D = np.array(21)
-# print(arr_0D)  # 0-D array
+# print(arr_0D)  # 21, 0-D array
 # print(arr_0D.ndim) # 0
 # arr_1D = np.array([1,2,3,4,5])
 # print(arr_1D) # 1-D array
@@ -278,37 +278,4 @@ print(np.__version__)  # 2.3.4
 # newarr = arr[filter_arr]
 # print(filter_arr)  # [False  True False  True False  True False]
 # print(newarr)  # [2 4 6]
-
-
-
-  
-
-
-
-
- 
-
- 
-
- 
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
