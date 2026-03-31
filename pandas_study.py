@@ -1,35 +1,52 @@
 # check version of pandas:-
 import pandas as pd
 import matplotlib.pyplot as plt
-# print(pd.__version__)
+# print(pd.__version__)  # 2.3.3
 
 # pandas Series:-
 a = [1, 7, 2]
-# s = pd.Series(a)
+s = pd.Series(a)
 # print(s)
-# print(s[1]) # accessing a particular value from series
+# 0    1
+# 1    7
+# 2    2
+# dtype: int64
+# print(s.dtype)  # int64
+# print(s[1]) # 7
 # myvar = pd.Series(a, index = ["x", "y", "z"])
-# print(myvar)
-# print(myvar["y"])
+# print(myvar) 
+# x    1
+# y    7
+# z    2
+# dtype: int64
+# print(myvar["y"])  # 7
 # calories = {"day1": 420, "day2": 380, "day3": 390}
 # myvar = pd.Series(calories)
 # print(myvar)
-# print(myvar["day2"])
+# day1    420
+# day2    380
+# day3    390
+# dtype: int64
+# print(myvar["day3"])  # 390
 # calories = {"day1": 420, "day2": 380, "day3": 390}
 # myvar = pd.Series(calories, index = ["day1", "day3"])
 # print(myvar)
+# day1    420
+# day3    390
+# dtype: int64
 
 # pandas Dataframe:-
-# data = {
-#   "calories": [420, 380, 390],
-#   "duration": [50, 40, 45]
-# }
-# df = pd.DataFrame(data, index = ["day1", "day2", "day3"]) # index argument, can name your own indexes
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+df = pd.DataFrame(data, index = ["day1", "day2", "day3"]) # index argument, can name your own indexes
 # print(df)
 # print(df["duration"])  # used to select a column
-# print(df.loc[2]) # return series
-# print(df.loc[[0, 2]]) # return DataFrame
+# print(df.loc["day2"]) # return series
+# print(df.loc[["day1", "day3"]]) # return DataFrame
 # print(df.loc["day1":"day3", "duration"])
+# print(df.iloc[0:2, 0:1])
 
 # load csv files:-
 df = pd.read_csv('data.csv')
@@ -44,16 +61,17 @@ df = pd.read_csv('data.csv')
 # print(df.tail(23))
 # print(df.info())
 # print(df.describe())
-print(df.shape) # return a tuple (169, 4)
+# print(df.shape) # return a tuple (169, 4)
 print(df.dtypes) # return a series 
 # Duration      int64
 # Pulse         int64
 # Maxpulse      int64
 # Calories    float64
+# dtype: object
 
 # load json files:-
 # df = pd.read_json("data.json")
-# # print(df)
+# print(df)
 # data = {
 #   "Duration":{
 #     "0":60,
@@ -72,6 +90,7 @@ print(df.dtypes) # return a series
 #     "5":102
 #   },}
 # print(pd.DataFrame(data))
+# print(pd.DataFrame([[1,2,3], [4,5,6], [7,8]], index=[11,12,13]))
 
 # Cleaning Data
 
@@ -115,6 +134,7 @@ df = pd.read_csv("data1.csv")
 # print(df.duplicated())  # Returns True for every row that is a duplicate, otherwise False:
 # df.drop_duplicates(inplace = True)
 
+
 # Pandas Correlations:-
 # df = pd.read_csv('data.csv')
 # print(df.corr())
@@ -127,6 +147,6 @@ df = pd.read_csv('data.csv')
 # plt.show()
 # df.plot(kind = 'scatter', x = 'Duration', y = 'Maxpulse')
 # plt.show()
-# df["Duration"].plot(kind = 'hist')
+# df["Maxpulse"].plot(kind = 'hist')
 # plt.show()
 
